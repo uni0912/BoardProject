@@ -2,26 +2,29 @@ package kr.ac.kopo.kopo28.service;
 
 import java.util.List;
 
+import kr.ac.kopo.kopo28.dao.BoardItemDao;
+import kr.ac.kopo.kopo28.dao.BoardItemDaoImpl;
 import kr.ac.kopo.kopo28.domain.BoardItem;
 
 public class BoardItemServiceImpl implements BoardItemService {
+	
+	private BoardItemDao boardItemDao = new BoardItemDaoImpl();
 
 	@Override
 	public void create(BoardItem boardItem) {
-		// TODO Auto-generated method stub
+		boardItemDao.create(boardItem);
 		
 	}
 
 	@Override
-	public BoardItem selectOne(int id) {
-		// TODO Auto-generated method stub
-		return null;
+	public BoardItem selectOne(int id) {		
+		return boardItemDao.selectOne(id);
 	}
 
 	@Override
 	public List<BoardItem> selectAll() {
 		// TODO Auto-generated method stub
-		return null;
+		return boardItemDao.selectAll();
 	}
 
 	@Override

@@ -9,6 +9,6 @@ public class BoardDaoTest {
 		board.setTitle("abcd");
 		
 		BoardDao boardDao = new BoardDaoImpl();
-		boardDao.create(board);
+		boardDao.selectAll();
 	}
 }

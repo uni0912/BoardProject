@@ -8,7 +8,7 @@ import kr.ac.kopo.kopo28.domain.Board;
 
 public class BoardServiceImpl implements BoardService {
 	
-	private BoardDao boardDao = new BoardDaoImpl();
+	private BoardDao boardDao = new BoardDaoImpl();	
 	
 	@Override
 	public void create(Board board) {
@@ -22,9 +22,9 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public List<Board> selectAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Board> selectAll() {		
+		
+		return boardDao.selectAll();
 	}
 
 	@Override

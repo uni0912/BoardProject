@@ -3,6 +3,7 @@ package kr.ac.kopo.kopo28.domain;
 public class Board {
 	private int id;
 	private String title;
+	
 	public int getId() {
 		return id;
 	}
